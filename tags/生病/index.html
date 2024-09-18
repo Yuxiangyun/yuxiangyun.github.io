@@ -1,25 +1,12 @@
-extends ../_partial/layout
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="description" content="这里是Yu的个人博客站点"><meta name="keyword"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Yu的部落格</title><link rel="shortcut icon" href="https://pic.imgdb.cn/item/669cf486d9c307b7e9ba2659.jpg" type="image/x-icon"><link href="/styles/site.css" rel="stylesheet"><meta name="generator" content="Hexo 7.3.0"></head><body><header class="container" id="header"><div class="header"><div class="header-left"><div class="avatar"><img src="https://pic.imgdb.cn/item/669cf486d9c307b7e9ba2659.jpg"></div><div class="author"><div class="author-name"><a href="/">Yu的部落格</a></div><div class="about-me">Stay Hungry, Stay Foolish</div></div></div><div class="header-right"><ul class="navigation"><li><a href="/archives">归档</a></li><li><a href="/about">关于</a></li></ul></div><div class="about-me-mask"><div class="about-me-wrap"><div class="about-me__header"><div class="avatar"><img src="https://pic.imgdb.cn/item/669cf486d9c307b7e9ba2659.jpg"></div></div><ul class="socials"><li class="social-item"><span class="label"><img src="/images/socials/github.svg" alt="https://github.com/yuxiangyun"></span><a href="https://github.com/yuxiangyun" target="_blank" title="https://github.com/yuxiangyun">https://github.com/yuxiangyun</a></li><li class="social-item"><span class="label"><img src="/images/socials/email.svg" alt="yuuxiangyun@outlook.com"></span><span>yuuxiangyun@outlook.com</span></li></ul></div></div></div></header><div class="container"><div class="archives"><div class="post-archive"><div class="post-archive__content"><div class="post-archive__month">02月</div><div class="post-archive__body"><a class="post-archive__title" href="/2024/02/24/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%BC%95%E6%B5%81%E6%89%8B%E6%9C%AF/">记一次引流手术</a><div class="post-archive__excerpt"><div class="post-archive__excerpt-content"><h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>今年我做了人生中的第一个小手术，引流手术。如果你看到“火疖子”“囊肿”这几个词在幸灾乐祸，你最好保佑好自己🙏不会有这些东西。</p>
+<p>伏笔大概已经在去年就埋好了，那时候在学校因为坐得久，屁股上长了一个小肿块，是的，一个小肿块和我的屁股和谐共生。</p></div></div></div></div></div></div></div><div id="backToTop"><div class="back-arrow back-arrow-left"></div><div class="back-arrow back-arrow-right"></div></div><footer class="container"></footer>
+<script src="/script/jquery.min.js"></script>
 
-block content
-  .container
-    - const _posts = [];
-    - // 按标签将文章分组
-    - for (let i = 0; i < site.posts.data.length; i++) {
-    -   const post = site.posts.data[i];
-    -   if (post.tags.data.length === 0) {
-    -     continue;
-    -   }
-    -   const tags = post.tags.data.map(tag => tag.name);
-    -   if (tags.includes(page.tag)) {
-    -     _posts.push(post);
-    -   }
-    - }
-    .archives
-      each post in _posts
-        .post-archive
-          .post-archive__content
-            .post-archive__month= time(post.date, 'MM月')
-            .post-archive__body
-              a.post-archive__title(href=url_for(post.path))= post.title || '未命名'
-              .post-archive__excerpt
-                .post-archive__excerpt-content!= post.excerpt
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<script src="/script/index.js"></script>
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'G-H6LPER6VZX', 'auto');
+ga('send', 'pageview');</script></body></html>

@@ -1,41 +1,22 @@
-extends ../_partial/layout
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="description" content="这里是Yu的个人博客站点"><meta name="keyword"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>关于写日记</title><link rel="shortcut icon" href="https://pic.imgdb.cn/item/669cf486d9c307b7e9ba2659.jpg" type="image/x-icon"><link href="/styles/site.css" rel="stylesheet"><meta name="generator" content="Hexo 7.3.0"></head><body><header class="container" id="header"><div class="header"><div class="header-left"><div class="avatar"><img src="https://pic.imgdb.cn/item/669cf486d9c307b7e9ba2659.jpg"></div><div class="author"><div class="author-name"><a href="/">Yu的部落格</a></div><div class="about-me">Stay Hungry, Stay Foolish</div></div></div><div class="header-right"><ul class="navigation"><li><a href="/archives">归档</a></li><li><a href="/about">关于</a></li></ul></div><div class="about-me-mask"><div class="about-me-wrap"><div class="about-me__header"><div class="avatar"><img src="https://pic.imgdb.cn/item/669cf486d9c307b7e9ba2659.jpg"></div></div><ul class="socials"><li class="social-item"><span class="label"><img src="/images/socials/github.svg" alt="https://github.com/yuxiangyun"></span><a href="https://github.com/yuxiangyun" target="_blank" title="https://github.com/yuxiangyun">https://github.com/yuxiangyun</a></li><li class="social-item"><span class="label"><img src="/images/socials/email.svg" alt="yuuxiangyun@outlook.com"></span><span>yuuxiangyun@outlook.com</span></li></ul></div></div></div></header><div class="container post"><section class="article"><div class="title">关于写日记</div><div class="date">写于2024年02月08日</div><div class="content"><h1 id="为什么要写日记❔️"><a href="#为什么要写日记❔️" class="headerlink" title="为什么要写日记❔️"></a>为什么要写日记❔️</h1><p>写日记可以回顾记忆、理解自我思想、改变对待生活的态度。日记是理解自己想法和感受的方式，可以通过问自己问题来审问自己。写日记的三个方式分别是记录当天事情、讲故事和写晨报。通过写日记，可以增加对生活的欣赏和创造力。总结自Ali Abdaal</p>
+<span id="more"></span>
+<h1 id="晨间日记🥪"><a href="#晨间日记🥪" class="headerlink" title="晨间日记🥪"></a>晨间日记🥪</h1><p>想到什么就写一些什么，开阔一下自己的想象力。如果实在是不知道从何处起笔，那么可以这样子写，现在是2月8日的下午，我坐在床上…</p>
+<h1 id="心情日记😀"><a href="#心情日记😀" class="headerlink" title="心情日记😀"></a>心情日记😀</h1><p>纪录今天做了什么事情？今天发生的几件事？重点落在思绪，感受，情感……</p>
+<p>表达性写作，纪录生活中任何痛苦，消极，抓马的事，主要记录今天自己的感受（情绪），以及对事情的想法，并反思今天的行为如何影响自己的心情，可以如何更积极应对。</p>
+<h1 id="日记作业📘"><a href="#日记作业📘" class="headerlink" title="日记作业📘"></a>日记作业📘</h1><p>今天发生在我身上的最有故事价值的事情是什么？</p>
+<h1 id="感恩日记❤"><a href="#感恩日记❤" class="headerlink" title="感恩日记❤"></a>感恩日记❤</h1><p>所感激的人或事（关注自己生活中发生的美好的事情上）<br>你感激的三件事是什么，我很感谢谁，描述这个人的特点的三个品质，此人在什么时候展现出了这些品质。</p>
+<h1 id="决策日记🤔"><a href="#决策日记🤔" class="headerlink" title="决策日记🤔"></a>决策日记🤔</h1><p>1、思考：<br>（1）你应该做什么？<br>（2）你想做什么决定？<br>（3）此时此地你应该采取什么行动？</p>
+<p>以上为内容复制来的</p>
+</div><div class="tags"><a class="tag-link" href="/tags/%E8%AE%B0%E5%BD%95/" rel="tag">记录</a></div></section></div><div class="container"><ul class="nav"><li>上一篇：<a href="/2024/02/24/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%BC%95%E6%B5%81%E6%89%8B%E6%9C%AF/">记一次引流手术</a></li><li>下一篇：<a href="/2024/02/08/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/">我的第一篇</a></li></ul></div><div id="backToTop"><div class="back-arrow back-arrow-left"></div><div class="back-arrow back-arrow-right"></div></div><footer class="container"></footer>
+<script src="/script/jquery.min.js"></script>
 
-block content
-  .container.post
-    section.article
-      .title= page.title
-      .date 写于#{moment(page.date).format(theme.date_format)}
-      .content!= page.content
-      if page.tags
-        .tags!= list_tags(page.tags, { show_count: false, class: 'tag', style: false, separator: '' })
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
-  .container
-    ul.nav
-      if page.prev
-        li 上一篇：
-          a(href=url_for(page.prev.path))= page.prev.title || '未命名'
-      if page.next
-        li 下一篇：
-          a(href=url_for(page.next.path))= page.next.title || '未命名'
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-    if !index && config.disqus_shortname
-      .comments
-        #disqus_thread
-          noscript Please enable JavaScript to view the 
-            a(href="http://disqus.com/?ref_noscript") comments powered by Disqus
-
-block js
-  != js('script/post')
-  if config.disqus_shortname
-    script
-      | var disqus_shortname = '!{config.disqus_shortname}';
-      if page.permalink
-        | var disqus_url = '!{page.permalink}';
-        | (function(){
-        |  var dsq = document.createElement('script');
-        |  dsq.type = 'text/javascript';
-        |  dsq.async = true;
-        |  dsq.src = '//' + disqus_shortname + '.disqus.com/!{page.comments ? 'embed.js' : 'count.hs'}';
-        |  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        | })();
-        
+<script src="/script/index.js"></script>
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'G-H6LPER6VZX', 'auto');
+ga('send', 'pageview');</script>
+<script src="/script/post.js"></script>
+</body></html>
