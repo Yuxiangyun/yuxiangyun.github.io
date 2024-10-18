@@ -201,10 +201,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-10-17 15:57:53 / 修改时间：22:20:33" itemprop="dateCreated datePublished" datetime="2024-10-17T15:57:53+08:00">2024-10-17</time>
+              <time title="创建时间：2024-10-17 15:57:53" itemprop="dateCreated datePublished" datetime="2024-10-17T15:57:53+08:00">2024-10-17</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-10-18 22:35:45" itemprop="dateModified" datetime="2024-10-18T22:35:45+08:00">2024-10-18</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -226,43 +232,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="2024年10月15日"><a href="#2024年10月15日" class="headerlink" title="2024年10月15日"></a>2024年10月15日</h1><p>1.为什么用void，因为你有时候定义一个函数并不要求他要返回什么东西，<strong>只是关注于他能做什么事情。</strong></p>
-<p>2.为什么要有函数，因为当你想要实现某种功能的时候，<strong>你无需重复复制粘贴</strong>，只需要调用函数。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">// 定义一个返回两个数乘积的函数</span><br><span class="line">int Mutiply(int a, int b)</span><br><span class="line">&#123;</span><br><span class="line">    return a * b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 定义 MutiplyAPP 函数，调用 Mutiply 并输出结果</span><br><span class="line">void MutiplyAPP(int a, int b)</span><br><span class="line">&#123;</span><br><span class="line">    int result = Mutiply(a, b); // 调用 Mutiply 计算乘积</span><br><span class="line">    std::cout &lt;&lt; result &lt;&lt; std::endl; // 输出结果</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    MutiplyAPP(4, 5); // 调用 MutiplyAPP 函数</span><br><span class="line">    MutiplyAPP(6, 4);</span><br><span class="line">    std::cin.get(); // 等待用户输入，防止程序结束</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>只有主函数 <strong>int main</strong>不用返回一个值，因为他会自动假设返回0.</li>
-<li>头文件其实很有用，他的用途不只是声明，以供你在多个CPP中使用.在基础中，头文件传统上是用来声明某些函数类型，一遍用于整个函数，我们需要一个共同的地方来存放函数，只是声明，没有函数的主体。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">void Log(const char* message)</span><br><span class="line">&#123;</span><br><span class="line">	std::cout &lt;&lt; message &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void Log(const char* message); #这就是上面那个函数的签名</span><br><span class="line"></span><br><span class="line">void InitLog()</span><br><span class="line">&#123;</span><br><span class="line">	Log(&quot;lll&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这就是告诉源2那个函数所在位置的方法。但是如果我们需要在别处用到呢？我们难道要复制粘贴吗？头文件在这的作用就发挥出来看了，他可以复制粘贴 <strong>函数</strong>到我们需要用这个函数的地方。</p>
-<p>检查include有没有重复引用的方法</p>
-<ol>
-<li>头文件生成时自带**#pragma once**</li>
-<li>还有一种 <strong>ifentif</strong></li>
-</ol>
-<p>为什么有有时候用</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include&lt;stdio.h&gt;</span><br></pre></td></tr></table></figure>
-
-<p>而有时候是</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include&quot;Log.h&quot;</span><br></pre></td></tr></table></figure>
-
-<p>因为**引号””<strong>可用于相对位置的头文件,而</strong>&lt;&gt;**却只能用于 某一些 头文件,这些头文件都可以用引号表示.</p>
-<p>扩展名问题</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include&lt;iostream&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include&lt;stdio.h&gt;</span><br></pre></td></tr></table></figure>
-
-<p>C++都没有扩展名,<strong>C</strong>却大多有扩展名,这也是区分标准库属于哪的判断依据.</p>
-<h1 id="2024年10月17日"><a href="#2024年10月17日" class="headerlink" title="2024年10月17日"></a>2024年10月17日</h1><h2 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h2><p>当我们有一个条件指向一个分支的时候，我们就是在告诉我们的电脑，<strong>嘿，快跳到这个内存地址，执行这个指令</strong>。</p>
-<p>许多高效的代码可能避免<strong>分支结构</strong>，可能内存中指令和分支距离较远时候会带来效率问题。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&quot;log.h&quot;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int x = 5;</span><br><span class="line">	bool compare = x == 5;</span><br><span class="line">	if (compare);</span><br><span class="line">	&#123;</span><br><span class="line">		InitLog();</span><br><span class="line">		Log(&quot;hello world&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	std::cin.get();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>再这行代码里，布尔 <strong>bool</strong>判断x是否为5，如果则打印（<strong>compare &#x3D;&#x3D; true</strong>）</p>
-
+          <h1 id="2024年10月15日"><a href="#2024年10月15日" class="headerlink" title="2024年10月15日"></a>2024年10月15日</h1><p>本篇主要在于记录一下我学CPP的过程，内容基于自己的理解。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/10/17/cppnote/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
