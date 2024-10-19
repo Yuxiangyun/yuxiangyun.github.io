@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"yuxiangyun.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"avatar":"https://pic.imgdb.cn/item/669cf486d9c307b7e9ba2659.jpg","url":"https://pic.imgdb.cn/item/669cf486d9c307b7e9ba2659.jpg","rounded":false,"rotated":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="2024年10月15日本篇主要在于记录一下我学CPP的过程，内容基于自己的理解。">
+  <meta name="description" content="本篇主要在于记录一下我学CPP的过程，内容基于自己的理解。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CPP学习笔记">
 <meta property="og:url" content="https://yuxiangyun.top/2024/10/17/cppnote/">
 <meta property="og:site_name" content="Yu的部落格">
-<meta property="og:description" content="2024年10月15日本篇主要在于记录一下我学CPP的过程，内容基于自己的理解。">
+<meta property="og:description" content="本篇主要在于记录一下我学CPP的过程，内容基于自己的理解。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-17T07:57:53.000Z">
-<meta property="article:modified_time" content="2024-10-18T14:35:45.997Z">
+<meta property="article:modified_time" content="2024-10-19T02:20:03.261Z">
 <meta property="article:author" content="喻祥云">
 <meta property="article:tag" content="博客 喻祥云 yuxiangyun">
 <meta name="twitter:card" content="summary">
@@ -211,7 +211,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-10-18 22:35:45" itemprop="dateModified" datetime="2024-10-18T22:35:45+08:00">2024-10-18</time>
+                <time title="修改时间：2024-10-19 10:20:03" itemprop="dateModified" datetime="2024-10-19T10:20:03+08:00">2024-10-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,10 +234,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="2024年10月15日"><a href="#2024年10月15日" class="headerlink" title="2024年10月15日"></a>2024年10月15日</h1><p>本篇主要在于记录一下我学CPP的过程，内容基于自己的理解。</p>
+        <p>本篇主要在于记录一下我学CPP的过程，内容基于自己的理解。</p>
 <span id="more"></span>
 
-<p>1.为什么用void，因为你有时候定义一个函数并不要求他要返回什么东西，<strong>只是关注于他能做什么事情。</strong></p>
+<h1 id="2024年10月15日"><a href="#2024年10月15日" class="headerlink" title="2024年10月15日"></a>2024年10月15日</h1><p>1.为什么用void，因为你有时候定义一个函数并不要求他要返回什么东西，<strong>只是关注于他能做什么事情。</strong></p>
 <p>2.为什么要有函数，因为当你想要实现某种功能的时候，<strong>你无需重复复制粘贴</strong>，只需要调用函数。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line"></span><br><span class="line">// 定义一个返回两个数乘积的函数</span><br><span class="line">int Mutiply(int a, int b)</span><br><span class="line">&#123;</span><br><span class="line">    return a * b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 定义 MutiplyAPP 函数，调用 Mutiply 并输出结果</span><br><span class="line">void MutiplyAPP(int a, int b)</span><br><span class="line">&#123;</span><br><span class="line">    int result = Mutiply(a, b); // 调用 Mutiply 计算乘积</span><br><span class="line">    std::cout &lt;&lt; result &lt;&lt; std::endl; // 输出结果</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    MutiplyAPP(4, 5); // 调用 MutiplyAPP 函数</span><br><span class="line">    MutiplyAPP(6, 4);</span><br><span class="line">    std::cin.get(); // 等待用户输入，防止程序结束</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -252,7 +252,7 @@
 <p>这就是告诉源2那个函数所在位置的方法。但是如果我们需要在别处用到呢？我们难道要复制粘贴吗？头文件在这的作用就发挥出来看了，他可以复制粘贴 <strong>函数</strong>到我们需要用这个函数的地方。</p>
 <p>检查include有没有重复引用的方法</p>
 <ol>
-<li>头文件生成时自带**#pragma once**</li>
+<li>头文件生成时自带#pragma once</li>
 <li>还有一种 <strong>ifentif</strong></li>
 </ol>
 <p>为什么有有时候用</p>
@@ -261,18 +261,18 @@
 <p>而有时候是</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include&quot;Log.h&quot;</span><br></pre></td></tr></table></figure>
 
-<p>因为**引号””<strong>可用于相对位置的头文件,而</strong>&lt;&gt;**却只能用于 某一些 头文件,这些头文件都可以用引号表示.</p>
+<p>因为引号”” <strong>可用于相对位置的头文件,而</strong> &lt;&gt;却只能用于 某一些 头文件,这些头文件都可以用引号表示.</p>
 <p>扩展名问题</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include&lt;iostream&gt;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include&lt;stdio.h&gt;</span><br></pre></td></tr></table></figure>
 
-<p>C++都没有扩展名,<strong>C</strong>却大多有扩展名,这也是区分标准库属于哪的判断依据.</p>
+<p>**C++**都没有扩展名,<strong>C</strong>却大多有扩展名,这也是区分标准库属于哪的判断依据.</p>
 <h1 id="2024年10月17日"><a href="#2024年10月17日" class="headerlink" title="2024年10月17日"></a>2024年10月17日</h1><h2 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h2><p>当我们有一个条件指向一个分支的时候，我们就是在告诉我们的电脑，<strong>嘿，快跳到这个内存地址，执行这个指令</strong>。</p>
 <p>许多高效的代码可能避免<strong>分支结构</strong>，可能内存中指令和分支距离较远时候会带来效率问题。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&quot;log.h&quot;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int x = 5;</span><br><span class="line">	bool compare = x == 5;</span><br><span class="line">	if (compare);</span><br><span class="line">	&#123;</span><br><span class="line">		InitLog();</span><br><span class="line">		Log(&quot;hello world&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	std::cin.get();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>再这行代码里，布尔 <strong>bool</strong>判断x是否为5，如果则打印（<strong>compare &#x3D;&#x3D; true</strong>）</p>
+<p>再这行代码里，布尔 <strong>bool</strong>判断x是否为5，如果则打印（<strong>compare &#x3D;&#x3D; true</strong>）.</p>
 <h1 id="2024年10月18日"><a href="#2024年10月18日" class="headerlink" title="2024年10月18日"></a>2024年10月18日</h1><h2 id="FOR循环以及WHILE循环"><a href="#FOR循环以及WHILE循环" class="headerlink" title="FOR循环以及WHILE循环"></a>FOR循环以及WHILE循环</h2><p><strong>FORLOOP</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main() #打印五次</span><br><span class="line">&#123;</span><br><span class="line">	for (int i = 0; i &lt; 5; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;hello ,world\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -305,6 +305,16 @@
 <p>一定要注意如果函数需要返回一个值，那么一定要return一个值。</p>
 <h2 id="什么控制了语句"><a href="#什么控制了语句" class="headerlink" title="什么控制了语句"></a>什么控制了语句</h2><p>控制流语句控制了程序的运行。</p>
 <p>这些IF语句，条件语句，循环，控制流，就是逻辑编程的核心，是用来修改程序运行情况的唯一工具。</p>
+<h1 id="2024年10月19日"><a href="#2024年10月19日" class="headerlink" title="2024年10月19日"></a>2024年10月19日</h1><h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><p>指针对于控制内存在的数据极为重要。</p>
+<p>所有类型的指针都是一个整数，存放着一个内存地址，类型不会改变指针，指针永远只是一个地址。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void *ptr = 0 //这是一个没有类型的，无效指针，0/null 代表无意义，但可以存在。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int main</span><br><span class="line">&#123;</span><br><span class="line">int var = 8;</span><br><span class="line">void *ptr = &amp;var;//取出地址</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你想找到变量var在内存中存放的地址，就用**&amp;<strong>运算符。在变量前加&amp;实际上就是在问：</strong>hi，你的地址是什么**。</p>
+<p>当我们知道变量var的地址，那我们怎么才能<strong>读取或改写</strong>？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int main</span><br><span class="line">&#123;</span><br><span class="line">int var = 8;</span><br><span class="line">int *ptr = &amp;var;</span><br><span class="line">*ptr = 10;</span><br><span class="line">//取出地址，int类型告诉编译器，指指针*ptr应该以整数的形式，存储这个数字8</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -383,7 +393,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2024%E5%B9%B410%E6%9C%8815%E6%97%A5"><span class="nav-number">1.</span> <span class="nav-text">2024年10月15日</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2024%E5%B9%B410%E6%9C%8817%E6%97%A5"><span class="nav-number">2.</span> <span class="nav-text">2024年10月17日</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.1.</span> <span class="nav-text">条件语句</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2024%E5%B9%B410%E6%9C%8818%E6%97%A5"><span class="nav-number">3.</span> <span class="nav-text">2024年10月18日</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#FOR%E5%BE%AA%E7%8E%AF%E4%BB%A5%E5%8F%8AWHILE%E5%BE%AA%E7%8E%AF"><span class="nav-number">3.1.</span> <span class="nav-text">FOR循环以及WHILE循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E5%93%AA%E4%B8%AA"><span class="nav-number">3.2.</span> <span class="nav-text">用哪个</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5"><span class="nav-number">3.3.</span> <span class="nav-text">控制流语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#continue"><span class="nav-number">3.4.</span> <span class="nav-text">continue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#break"><span class="nav-number">3.5.</span> <span class="nav-text">break</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#return"><span class="nav-number">3.6.</span> <span class="nav-text">return</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%8E%A7%E5%88%B6%E4%BA%86%E8%AF%AD%E5%8F%A5"><span class="nav-number">3.7.</span> <span class="nav-text">什么控制了语句</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2024%E5%B9%B410%E6%9C%8815%E6%97%A5"><span class="nav-number">1.</span> <span class="nav-text">2024年10月15日</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2024%E5%B9%B410%E6%9C%8817%E6%97%A5"><span class="nav-number">2.</span> <span class="nav-text">2024年10月17日</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5"><span class="nav-number">2.1.</span> <span class="nav-text">条件语句</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2024%E5%B9%B410%E6%9C%8818%E6%97%A5"><span class="nav-number">3.</span> <span class="nav-text">2024年10月18日</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#FOR%E5%BE%AA%E7%8E%AF%E4%BB%A5%E5%8F%8AWHILE%E5%BE%AA%E7%8E%AF"><span class="nav-number">3.1.</span> <span class="nav-text">FOR循环以及WHILE循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8%E5%93%AA%E4%B8%AA"><span class="nav-number">3.2.</span> <span class="nav-text">用哪个</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5"><span class="nav-number">3.3.</span> <span class="nav-text">控制流语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#continue"><span class="nav-number">3.4.</span> <span class="nav-text">continue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#break"><span class="nav-number">3.5.</span> <span class="nav-text">break</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#return"><span class="nav-number">3.6.</span> <span class="nav-text">return</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%8E%A7%E5%88%B6%E4%BA%86%E8%AF%AD%E5%8F%A5"><span class="nav-number">3.7.</span> <span class="nav-text">什么控制了语句</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2024%E5%B9%B410%E6%9C%8819%E6%97%A5"><span class="nav-number">4.</span> <span class="nav-text">2024年10月19日</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-number">4.0.1.</span> <span class="nav-text">指针</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
